@@ -4,38 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Abreu - Personal Website</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your stylesheet (more on this later) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+        <div class="nav-container">
+            <a href="/" class="logo">Miguel Abreu</a>
+            <div class="menu-toggle" id=""mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+        
+            </div>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="https://www.linkedin.com/in/miguel-abreu" target="_blank">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <main>
-    <header>
-        <h1>
-            Hey, I'm Miguel Abreu
-        </h1>
-    </header>
-    <section>
-        <h2> About Me </h2>
-        <p>
-            I love a cup of cafe con leche and connecting with the Lord.
-        </p>
-    </section>
-    <section>
-        <h2> What I am working on </h2>
-        <p>
-            I am studying Computer Science with a focus on project management.
-        </p>
-    </section>
+      <header id="home">
+          <div class="hero-content">
+            <h1>Hey, I'm Miguel Abreu</h1>
+            <p>A passionate computer science student and aspiring project manager.</p>
+          </div>
+          <div class="hero-image">
+            <img src="images/Headshot 3.jpg" alt="Miguel Abreu's Headshot">
+          </div>
+      </header>
+
+      <section id="about">
+          <h2>About Me</h2>
+          <p>
+             I love a cup of cafe con leche and connecting with the Lord. I am studying Computer Science because I like solving complex problems. I like to get to know new people and I think that networking is an important skill to have.
+          </p>
+      </section>
+
+      <section id="projects">
+          <h2>What I'm Working On</h2>
+          <p>
+              I am currently working on completing my Computer Science degree and building some small projects in order to improve my portfolio.
+          </p>
+      </section>
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <p>
+            Feel free to reach out to me on my <a href="https://www.linkedin.com/in/miguel-abreu">LinkedIn Profile</a> or send me an email at <a href="mailto:miggyabreu997@gmail.com">your-email@example.com</a>
+          </p>
+        </section>
     </main>
     <footer>
-      <p>© 2023 Miguel Abreu</p>
+        <p>© 2023 Miguel Abreu</p>
     </footer>
+     <script src="script.js"></script>
 </body>
 </html>
