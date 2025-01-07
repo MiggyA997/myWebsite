@@ -141,7 +141,7 @@ section {
     padding: 1em 2em;
     margin-bottom: 2em;
     border-radius: 5px;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
@@ -180,4 +180,5 @@ footer {
     width: 100%;
   }
 }
+
 
