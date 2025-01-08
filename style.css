@@ -1,9 +1,15 @@
+:root{
+    --primary-color: #d3e9ed;
+    --background-color: #d3e9ed ;
+    --text-color: black;
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background-color: #c5ceed;
-    color: #c5edd8;
+    background-color: var(--background-color);
+    color: var(--text-color);
     scroll-behavior: smooth; /* Smooth scrolling */
     display: flex;
     flex-direction: column;
@@ -11,7 +17,7 @@ body {
 }
 
 nav {
-  background-color: #37cfed;
+  background-color: var(--primary-color);
   padding: 1em 0;
   position: sticky;
   top: 0;
@@ -119,7 +125,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 2em;
-  color:#c5ceed;
+  color: var(--background-color);
   font-family: 'Times New Roman', serif;
 }
 
@@ -159,8 +165,8 @@ section.show {
 
 footer {
     text-align: center;
-    background-color: #c5ceed;
-    color: white;
+    background-color: var(--primary-color);
+    color: black;
     padding: 1em;
     margin-top: auto;
 }
