@@ -10,7 +10,7 @@
     <nav>
         <div class="nav-container">
             <a href="/" class="logo">Miguel Abreu</a>
-            <div class="menu-toggle" id=""mobile-menu">
+            <div class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -24,6 +24,7 @@
             </ul>
         </div>
     </nav>
+
     <main>
       <header id="home">
           <div class="hero-content">
@@ -35,26 +36,28 @@
           </div>
       </header>
 
-      <section id="about">
-          <h2>About Me</h2>
-          <p>
+      <!-- Bubble container for interactive sections -->
+      <div class="bubble-container">
+        <div class="bubble" data-section="about">About Me</div>
+        <div class="bubble" data-section="projects">What I'm Working On</div>
+        <div class="bubble" data-section="contact">Contact Me</div>
+      </div>
+
+      <!-- Hidden sections-->
+      <section id="about" class="hidden-section">
              I love a cup of cafe con leche and connecting with the Lord. I am studying Computer Science because I like solving complex problems. I like to get to know new people and I think that networking is an important skill to have.
-          </p>
       </section>
 
-      <section id="projects">
-          <h2>What I'm Working On</h2>
-          <p>
-              I am currently working on completing my Computer Science degree and building some small projects in order to improve my portfolio.
-          </p>
+      <section id="projects" class="hidden-section">
+              I am currently working on completing my Computer Science degree and building some small projects in order to improve my portfolio, including this website which is constantly improving over time.
       </section>
-        <section id="contact">
-          <h2>Contact Me</h2>
-          <p>
+
+        <section id="contact" class="hidden-section">
             Feel free to reach out to me on my <a href="https://www.linkedin.com/in/miguel-abreu">LinkedIn Profile</a> or send me an email at <a href="mailto:miggyabreu997@gmail.com">your-email@example.com</a>
-          </p>
         </section>
+
     </main>
+
     <footer>
         <p>© 2023 Miguel Abreu</p>
     </footer>
