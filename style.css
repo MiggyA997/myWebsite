@@ -22,7 +22,7 @@ nav {
   padding: 1em 0;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -41,11 +41,16 @@ nav .logo {
 }
 
 nav ul {
+  position: relative;
+  z-index: 1001;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+}
+.nav-item{
+  z-index: 1002;
 }
 
 nav li {
@@ -55,7 +60,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: var(--nav-color); /* Nav bar text color */
-    transition: color 0.3s ease;
 }
 
 nav a:hover{
@@ -126,7 +130,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 2em;
-  color: black; /* color of main text for some reason */
+  color: black;
   font-family: 'Times New Roman', serif;
 }
 
@@ -148,20 +152,23 @@ header h1{
 }
 
 
-section {
-    background-color: #e6edef; /* Bars with extra info */
-    padding: 1em 2em;
-    margin-bottom: 2em;
-    border-radius: 5px;
-    opacity: 1;
+section.hidden-section {
+    display: none;
+    margin: 20px;
+    padding: 20px;
+    background-color: white; /* Bars with extra info */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0 ,0.2);
+    opacity: 0; /* hide section initially */
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     font-family:'Times New Roman', serif;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
@@ -171,6 +178,7 @@ footer {
     padding: 1em;
     margin-top: auto;
 }
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {
@@ -182,6 +190,7 @@ footer {
     margin-top: 10px;
     flex-direction: column;
   }
+
   nav li {
     margin: 5px 0;
   }
@@ -192,5 +201,45 @@ footer {
   .hero-content, .hero-image {
     width: 100%;
   }
+}
+
+/* Bubble Container */
+.bubble-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  margin: 3em 0;
+}
+
+/* Individual Bubble */
+.bubble {
+  padding: 1.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bubble:hover{
+  transform: scale(1.2); /* Makws bubble Larger on hover*/
+  background-color: #0097a7; /* Darkens color */
+}
+
+.bubble:active{
+  transform: scale(1.1); /*slighlty reduces size on click */
+}
+
+footer p{
+  font-size: 0.9em;
 }
 
