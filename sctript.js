@@ -22,6 +22,37 @@ function addShowClass(entries, observer) {
   mobileMenu.addEventListener('click', () => {
     navList.classList.toggle('active');
   });
+
+  // Bubble interactivity logic
+  const bubbles = document.querySelectorAll('.bubble');
+  const hiddenSections = document.querySelectorAll('section.hidden-section');
+
+  // Initially hide all sections except #home
+  hiddenSections.forEach(section => {
+    section.classList.remove('active'); //NO sections are visible initially
+  });
+
+  bubbles.forEach(bubble => {
+    bubble.addEventListener('click', () => {
+      console.log('Bubble clicked: ', bubble); // Debugging log
+      // Get target section ID from bubble's data-section attribute
+      const targetSectionId = bubble.dataset.section;
+      console.log('Target section ID: ', targetSectionId); // debuggin log
+
+      const targetSection = document.getElementById(targetSectionId);
+  
+      if (targetSection) {
+        // Remove 'active' class from all sections
+        hiddenSections.forEach(section => section.classList.remove('active'));
+        // Add 'active' class to target section
+        targetSection.classList.add('active');
+        console.log('Section activated:', targetSection); // Debugging log
+
+      } else {
+        console.log('Section not found for ID:', targetSectionId); // Debugging log
+      }
+    });
+  });
   
   // Highlight the active menu item based on the current selection
   const navLinks = document.querySelectorAll('.nav-list a');
