@@ -1,7 +1,8 @@
 :root{
     --primary-color: #d3e9ed;
     --background-color: #d3e9ed ;
-    --text-color: black;
+    --text-color: rgb(0, 0, 0);
+    --nav-color: black; 
 }
 
 body {
@@ -34,7 +35,7 @@ nav {
 }
 
 nav .logo {
-  color: #9fc9ed;
+  color: var(--nav-color); /* top left, currently my name*/
   font-weight: bold;
   text-decoration: none;
 }
@@ -53,7 +54,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #9fc9ed;
+    color: var(--nav-color); /* Nav bar text color */
     transition: color 0.3s ease;
 }
 
@@ -63,7 +64,7 @@ nav a:hover{
 
 /* Active menu item styling */
 .nav-list a.active {
-    color: #85eddb; /* Highlight color*/
+    color: var(--primary-color); /* Highlight color*/
     font-weight: bold;
     border-bottom: 2px solid #85eddb; /*Optional underline*/
 }
@@ -76,7 +77,7 @@ nav a:hover{
 }
 
 .bar{
-    background-color:#d3e9ed;
+    background-color:rgb(0, 0, 0);  
     height: 3px;
     width: 25px;
     margin: 3px 0;
@@ -96,7 +97,7 @@ nav a:hover{
     .nav-list{
         display: none;
         flex-direction: column;
-        background-color: #85eddb;
+        background-color: var(--background-color);
         position: absolute;
         top: 60px;
         right: 0;
@@ -125,7 +126,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-bottom: 2em;
-  color: var(--background-color);
+  color: black; /* color of main text for some reason */
   font-family: 'Times New Roman', serif;
 }
 
@@ -148,7 +149,7 @@ header h1{
 
 
 section {
-    background-color: rgb(32, 30, 30);
+    background-color: #e6edef; /* Bars with extra info */
     padding: 1em 2em;
     margin-bottom: 2em;
     border-radius: 5px;
@@ -192,5 +193,4 @@ footer {
     width: 100%;
   }
 }
-
 
